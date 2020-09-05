@@ -39,11 +39,7 @@ let
         };
         version = "1.5.3";
         nodeBuildInputs = [];
-        meta = {
-          description = "";
-          homepage = "";
-          license = "";
-        };
+        meta = { };
       })
     ]))
   ];
