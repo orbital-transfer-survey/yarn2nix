@@ -22,8 +22,7 @@ let
 
   # convert a package.json to yarn2nix package template
   template = package-json: pkgs.runCommandLocal "generate-template" {} ''
-    ${yarn2nix}/bin/yarn2nix --license-data ${yarn2nix.passthru.licensesJson} \
-      --template ${package-json} > $out
+    ${yarn2nix}/bin/yarn2nix --template ${package-json} > $out
     echo "template for ${package-json} is:" >&2
     cat $out >&2
   '';
